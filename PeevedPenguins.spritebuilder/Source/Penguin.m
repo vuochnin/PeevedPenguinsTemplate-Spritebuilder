@@ -10,14 +10,6 @@
 
 @implementation Penguin
 
-- (id) init{
-    self = [super init];
-    
-    if(self){
-        CCLOG(@"Pengin created");
-    }
-    return self;
-}
 
 
 
