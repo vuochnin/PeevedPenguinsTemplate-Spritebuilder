@@ -463,6 +463,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -563,7 +565,7 @@
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>properties</key>
 		<array>
 			<dict>
