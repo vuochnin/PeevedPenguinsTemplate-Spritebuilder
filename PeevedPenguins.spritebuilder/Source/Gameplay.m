@@ -24,6 +24,7 @@
     // called on ecery touch in this scene
 - (void) touchBegan:(UITouch *)touch withEvent:(UIEvent *) event {
     [self launchPenguin];
+    CCLOG(@"Touched ##########");
 }
 
 - (void) launchPenguin{
