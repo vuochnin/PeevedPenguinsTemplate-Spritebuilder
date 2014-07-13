@@ -15,6 +15,9 @@
 }
 
 - (void) didLoadFromCC{ // is called when CCB file has completed loading
+    
+    CCLOG(@"didLoadFromCC passed ######");
+    
     //tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
@@ -28,6 +31,8 @@
 }
 
 - (void) launchPenguin{
+    CCLOG(@"launchPenguin method calling #######");
+    
     // loads the Penguin.ccb we have set up in Spritebuilder
     CCNode* penguin = [CCBReader load:@"Penguin"];
     // position the penguin at the bowl of the catapult
