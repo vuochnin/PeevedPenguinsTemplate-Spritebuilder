@@ -14,25 +14,18 @@
     CCNode *_levelNode;
 }
 
-- (void) didLoadFromCC{ // is called when CCB file has completed loading
-    
-    CCLOG(@"didLoadFromCC passed ######");
-    
-    //tell this scene to accept touches
+// is called when CCB file has completed loading
+- (void)didLoadFromCCB {
+    // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
-    CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
-    [_levelNode addChild:level];
 }
 
-    // called on ecery touch in this scene
-- (void) touchBegan:(UITouch *)touch withEvent:(UIEvent *) event {
+// called on every touch in this scene
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
     [self launchPenguin];
-    CCLOG(@"Touched ##########");
 }
 
-- (void) launchPenguin{
-    CCLOG(@"launchPenguin method calling #######");
-    
+- (void)launchPenguin {
     // loads the Penguin.ccb we have set up in Spritebuilder
     CCNode* penguin = [CCBReader load:@"Penguin"];
     // position the penguin at the bowl of the catapult
@@ -45,7 +38,6 @@
     CGPoint launchDirection = ccp(1, 0);
     CGPoint force = ccpMult(launchDirection, 8000);
     [penguin.physicsBody applyForce:force];
-    
 }
 
 
