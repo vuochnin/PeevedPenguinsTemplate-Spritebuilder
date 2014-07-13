@@ -278,8 +278,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -385,7 +383,7 @@
 						<key>children</key>
 						<array/>
 						<key>customClass</key>
-						<string>levelNode</string>
+						<string></string>
 						<key>displayName</key>
 						<string>CCNode</string>
 						<key>memberVarAssignmentName</key>
@@ -454,6 +452,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
