@@ -8,7 +8,10 @@
 
 #import "Penguin.h"
 
-@implementation Penguin
+@implementation Penguin{
+    CCNode *_currentPenguin;
+    CCPhysicsJoint *_penguinCatapultJoint;
+}
 
 
 
