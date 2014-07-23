@@ -99,7 +99,7 @@
     //ensure followed object is in visible are when starting
     self.position = ccp(0, 0);
     CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    [self runAction:follow];
+    //[self runAction:follow];
     
     // ensure followed object is in visible are when starting
     //self.position = ccp(0, 0);
@@ -108,10 +108,8 @@
 }
 
 - (void)retry {
-    //reload this level
+    // reload this level
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"Gameplay"]];
-    
-    
 }
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
