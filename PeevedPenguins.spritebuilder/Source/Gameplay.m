@@ -81,7 +81,7 @@
     // position the penguin at the bowl of the catapult
     penguin.position = ccpAdd(_catapultArm.position, ccp(16, 50));
     
-    // add the penguin to the physicsNode of this https://s3.amazonaws.com/mgwu-misc/Spritebuilder+Tutorial/Scrolling.gifscene (because it has physics enabled)
+    // add the penguin to the physicsNode of this scene (because it has physics enabled)
     [_physicsNode addChild:penguin];
     
     // manually create & apply a force to launch the penguin
@@ -92,12 +92,12 @@
     //ensure followed object is in visible are when starting
     self.position = ccp(0, 0);
     CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    [self runAction:follow];
+    //[self runAction:follow];
     
     // ensure followed object is in visible are when starting
     //self.position = ccp(0, 0);
     //CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
-    //[_contentNode runAction:follow];
+    [_contentNode runAction:follow];
 }
 
 - (void)retry {
