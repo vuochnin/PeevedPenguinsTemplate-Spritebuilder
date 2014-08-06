@@ -27,12 +27,24 @@
 - (void)didLoadFromCCB {
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
-
+    CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
+    [_levelNode addChild:level];
+    
+    // visualize physics bodies & joints
+    _physicsNode.debugDraw = FALSE;
+    
+    // nothing shall collide with our invisible nodes
+    _pullbackNode.physicsBody.collisionMask = @[];
+    
+    _mouseJointNode.physicsBody.collisionMask = @[];
+    
+    _physicsNode.collisionDelegate = self;
 }
 
 // called on every touch in this scene
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    [self launchPenguin];
     CGPoint touchLocation = [touch locationInNode:_contentNode];
     
     // start catapult dragging when a touch inside of the catapult arm occurs
